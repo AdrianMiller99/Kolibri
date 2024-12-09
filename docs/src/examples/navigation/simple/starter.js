@@ -5,10 +5,12 @@ import { SiteProjector }                    from "../../../kolibri/navigation/pr
 import { HomePage  }                        from "./home.js";
 import { UnstyledPage }                     from "./unstyled.js";
 import { MasterDetailPage }                 from "./masterDetailPage.js";
+import { SpinnerPage }                      from "./spinner.js";
 import {
         URI_HASH_HOME,
         URI_HASH_MASTER_DETAIL,
-        URI_HASH_UNSTYLED
+        URI_HASH_UNSTYLED,
+        URI_HASH_SPINNER
 }                                           from "../../../customize/uriHashes.js";
 
 
@@ -20,6 +22,7 @@ const siteProjector  = SiteProjector(siteController);
 siteController.registerPage(URI_HASH_HOME,          HomePage());
 siteController.registerPage(URI_HASH_UNSTYLED,      UnstyledPage());
 siteController.registerPage(URI_HASH_MASTER_DETAIL, MasterDetailPage());
+siteController.registerPage(URI_HASH_SPINNER,       SpinnerPage());
 
 SimpleNavigationProjector(siteController, siteProjector.sideNavigationElement, true);
 SimpleNavigationProjector(siteController, siteProjector.topNavigationElement, false);
